@@ -1,14 +1,13 @@
 # kubernetes-book
 
-![license](https://img.shields.io/github/license/minibear2333/kubernetes-book.svg)
-![issues](https://img.shields.io/github/issues/minibear2333/kubernetes-book.svg)
-![stars](https://img.shields.io/github/stars/minibear2333/kubernetes-book.svg)
-![forks](https://img.shields.io/github/forks/minibear2333/kubernetes-book.svg)
+![license](https://img.shields.io/github/license/minibear2333/kubernetes-book.svg)![issues](https://img.shields.io/github/issues/minibear2333/kubernetes-book.svg)![stars](https://img.shields.io/github/stars/minibear2333/kubernetes-book.svg)![forks](https://img.shields.io/github/forks/minibear2333/kubernetes-book.svg)
 
 小熊老师的Docker/Kubernetes(k8s)训练营文档材料
 
 * 如果这个项目能为您带来帮助，我将感到非常荣幸！
 * 如果您也对这个项目感兴趣，请点击一下  **<font color="gree">Star</font>** 以示鼓励， 项目会 **持续更新**，谢谢你的支持。
+* 如果你发现了项目中的问题，可以提 [issue](https://github.com/minibear2333/kubernetes-book/issues) 和 [pr](https://github.com/minibear2333/kubernetes-book/pulls)
+* 你可以使用 gitbook 来 [构建此项目](./tools/gitbook.md) 方便查看，后期封版时会构建电子书
 
 > tips: mac 使用 <kbd>command</kbd>+ <kbd>点击链接</kbd> ，windows使用<kbd>ctrl</kbd>+<kbd>点击链接</kbd>的方式可以在新标签打开页面
 
@@ -43,6 +42,10 @@
 ### 关于我
 
 可以看[我的github首页](https://github.com/minibear2333/)
+
+### blog
+
+机智的程序员小熊 [coding3min.com](https://coding3min.com)
 
 ### 公众号
 
