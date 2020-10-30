@@ -18,7 +18,7 @@
 * [Docker 训练营](http://weike.fm/Q6V2w16556)
 * Kubernetes 训练营 - 规划中 
 
-### Docker
+### Docker课程内容
 
 * 怎么理解容器
 * 容器技术的历史进程
@@ -30,6 +30,9 @@
 * Dockerfile
 * 构建Docker私有仓库
 * Dockerfile最佳实践
+
+**实验链接**
+* [容器&docker入门](Docker/chapter.1/README.md)
 
 ### Kubernetes
 
