@@ -1,6 +1,6 @@
 # kubernetes-book
 
-![license](https://img.shields.io/github/license/minibear2333/kubernetes-book.svg)![issues](https://img.shields.io/github/issues/minibear2333/kubernetes-book.svg)![stars](https://img.shields.io/github/stars/minibear2333/kubernetes-book.svg)![forks](https://img.shields.io/github/forks/minibear2333/kubernetes-book.svg)
+![license](https://img.shields.io/github/license/minibear2333/kubernetes-book.svg) ![issues](https://img.shields.io/github/issues/minibear2333/kubernetes-book.svg) ![stars](https://img.shields.io/github/stars/minibear2333/kubernetes-book.svg) ![forks](https://img.shields.io/github/forks/minibear2333/kubernetes-book.svg)
 
 小熊老师的Docker/Kubernetes(k8s)训练营文档材料
 
