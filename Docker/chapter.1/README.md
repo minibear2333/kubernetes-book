@@ -2,8 +2,9 @@
 
 ### 材料
 
-* [PPT](./容器&docker入门.pptx)
-
+* <a target="_blank" href="./容器&docker入门.pptx">容器&docker入门.pptx</a>
+* <a target="_blank" href="./容器&docker入门.html">容器&docker入门.html</a>
+  
 ### lab 1
 
 输出 hello world 
