@@ -17,10 +17,12 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: actions/checkout@v2
       - name: docker build pdf mobi epub
-        run: docker run -v /home/runner/work/kubernetes-book/kubernetes-book:/home minibear2333/gitbook-export:0.0.3
+        run: |
+          docker run -v /home/runner/work/kubernetes-book/kubernetes-book:/home minibear2333/gitbook-export:latest
+          ls
       - name: Create Release
         id: create_release
-        uses: minibear2333/create-release@master
+        uses: actions/create-release@v1.1.4
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
@@ -28,6 +30,8 @@ jobs:
             release_name: Release ${{ github.ref }}
             draft: false
             prerelease: false  
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF:10}" >> $GITHUB_ENV
       - name: Upload Release pdf
         uses: actions/upload-release-asset@v1.0.1
         env:
@@ -35,7 +39,7 @@ jobs:
         with:
             upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
             asset_path: ./book.pdf
-            asset_name: normal-${{ steps.create_release.outputs.tag }}-windows-x64.zip
+            asset_name: k8s-${{ env.RELEASE_VERSION }}.pdf
             asset_content_type: application/pdf
       - name: Upload Release epub
         uses: actions/upload-release-asset@v1.0.1
@@ -44,7 +48,7 @@ jobs:
         with:
             upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
             asset_path: ./book.epub
-            asset_name: normal-${{ steps.create_release.outputs.tag }}-windows-x64.zip
+            asset_name: k8s-${{ env.RELEASE_VERSION }}.epub
             asset_content_type: application/epub+zip
       - name: Upload Release mobi
         uses: actions/upload-release-asset@v1.0.1
@@ -53,5 +57,5 @@ jobs:
         with:
             upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
             asset_path: ./book.mobi
-            asset_name: normal-${{ steps.create_release.outputs.tag }}-windows-x64.zip
+            asset_name: k8s-${{ env.RELEASE_VERSION }}.mobi
             asset_content_type: aapplication/vnd.amazon.mobi8-ebook

@@ -1,0 +1,45 @@
+name: build release
+
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: backup master
+        run: | 
+          mkdir ../tmp-master
+          cp -r * ../tmp-master
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+      - name: merge master to gh-pages
+        run: |
+          rm -rf *
+          mv ../tmp-master/* .
+      - name: gen book
+        run: |
+          docker run -v /home/runner/work/kubernetes-book/kubernetes-book:/home minibear2333/gitbook-export:latest gitbook build
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF:10}" >> $GITHUB_ENV
+      - name: push gh-pages
+        uses: github-actions-x/commit@v2.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: gh-pages
+          force-add: 'true'
+          files: .
+          commit-message: 'update gitbook by tag ${{ env.RELEASE_VERSION }}'
+          rebase: 'true' # pull abd rebase before commit
+          name: minibear2333
+          email: pzqu@qq.com

@@ -7,7 +7,7 @@
 * 如果这个项目能为您带来帮助，我将感到非常荣幸！
 * 如果您也对这个项目感兴趣，请点击一下  **<font color="gree">Star</font>** 以示鼓励， 项目会 **持续更新**，谢谢你的支持。
 * 如果你发现了项目中的问题，可以提 [issue](https://github.com/minibear2333/kubernetes-book/issues) 和 [pr](https://github.com/minibear2333/kubernetes-book/pulls)
-* 你可以使用 gitbook 来 [构建此项目](./tools/gitbook.md) 方便查看，后期封版时会构建电子书
+* 你可以使用 gitbook 来 [构建此项目](./tools/gitbook.md) 方便查看，也可以[点此查看电子书](https://k8s.coding3min.com)
 
 > tips: mac 使用 <kbd>command</kbd>+ <kbd>点击链接</kbd> ，windows使用<kbd>ctrl</kbd>+<kbd>点击链接</kbd>的方式可以在新标签打开页面
 
