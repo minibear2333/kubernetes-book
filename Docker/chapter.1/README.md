@@ -1,9 +1,9 @@
-# 容器&docker入门
+# 容器实验
 
-### 材料
+### 课件
 
 * <a target="_blank" href="./容器&docker入门.pptx">容器&docker入门.pptx</a>
-* <a target="_blank" href="./容器&docker入门.html">容器&docker入门.html</a>
+* <a target="_blank" href="./容器&docker入门.pdf">容器&docker入门.pdf</a>
   
 ### lab 1
 
