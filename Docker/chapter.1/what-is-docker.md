@@ -39,3 +39,10 @@ Docker的部署模式是：复制->运行。
 
 [Docker 有什么优势？](https://blog.csdn.net/xiangxizhishi/article/details/79441391)
 [Docker 从入门到实践](https://yeasy.gitbook.io/docker_practice/basic_concept/container)
+
+
+### 公众号
+
+如果你想订阅我的文章，可以微信扫码关注我的公众号【机智的程序员小熊】，我是一个爱思考的程序员，专注于开发、运维、云技术、计算、网络、云存储、数据库、linux等编程知识
+
+![](./images/gzh.jpg)

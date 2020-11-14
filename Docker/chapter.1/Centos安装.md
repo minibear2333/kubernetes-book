@@ -86,3 +86,9 @@ ps: 更新国内镜像源参考 <a target="_blank" href="https://coding3min.com/
 [官网](https://docs.docker.com/engine/install/centos/)
 [CentOS Docker 安装](https://www.runoob.com/docker/centos-docker-install.html)
 [史上最全（全平台）docker安装方法！](https://zhuanlan.zhihu.com/p/54147784)
+
+### 公众号
+
+如果你想订阅我的文章，可以微信扫码关注我的公众号【机智的程序员小熊】，我是一个爱思考的程序员，专注于开发、运维、云技术、计算、网络、云存储、数据库、linux等编程知识
+
+![](./images/gzh.jpg)

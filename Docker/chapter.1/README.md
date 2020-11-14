@@ -4,7 +4,9 @@
 
 * <a target="_blank" href="./容器&docker入门.pptx">容器&docker入门.pptx</a>
 * <a target="_blank" href="./容器&docker入门.pdf">容器&docker入门.pdf</a>
+
   
+
 ### lab 1
 
 输出 hello world 
@@ -51,3 +53,9 @@ docker run -d -p 80:80 --name webserver nginx
 然后访问浏览器，如下成功
 
 ![](images/runnginx.png)
+
+### 公众号
+
+如果你想订阅我的文章，可以微信扫码关注我的公众号【机智的程序员小熊】，我是一个爱思考的程序员，专注于开发、运维、云技术、计算、网络、云存储、数据库、linux等编程知识
+
+![](./images/gzh.jpg)

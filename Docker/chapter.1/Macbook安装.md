@@ -15,7 +15,6 @@ docker 需要 Linux 内核的支持，实际上是在 Windows/MAC 上安装一�
 
 ### 安装
 
-
 进入[此页面点击](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)下载 Docker.app
 
 ![](images/mac-download.png)
@@ -30,5 +29,8 @@ docker 需要 Linux 内核的支持，实际上是在 Windows/MAC 上安装一�
 
 ![](images/whale-in-menu-bar.png)
 
+### 公众号
 
+如果你想订阅我的文章，可以微信扫码关注我的公众号【机智的程序员小熊】，我是一个爱思考的程序员，专注于开发、运维、云技术、计算、网络、云存储、数据库、linux等编程知识
 
+![](./images/gzh.jpg)
