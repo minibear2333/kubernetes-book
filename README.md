@@ -40,12 +40,14 @@
     - [Windows安装](Docker/chapter.1/Windows安装.md)
     - [Macbook安装](Docker/chapter.1/Macbook安装.md)
     - [容器&docker入门实验](Docker/chapter.1/README.md)
-* [Docker命令](Docker-command.md)
+* [Docker命令](Docker/chapter.2/README.md)
     - [基础命令](Docker/chapter.2/base-command.md)
-    - [容器命令](Docker/chapter.2/container-command.md)
     - [镜像命令](Docker/chapter.2/image-command.md)
+    - [容器操作命令](Docker/chapter.2/container-command.md)
+    - [容器管理命令](Docker/chapter.2/container-command2.md)
     - [资源命令](Docker/chapter.2/resources-command.md)
-    - [wordpress博客系统](wait.md)
+    - [wordpress博客系统](Docker/chapter.2/lab-wordpress.md)
+    - [python文件下载系统](Docker/chapter.2/lab-python.md)
 
 ### Kubernetes
 
