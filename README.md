@@ -7,16 +7,9 @@
 * 如果这个项目能为您带来帮助，我将感到非常荣幸！
 * 如果您也对这个项目感兴趣，请点击一下  **<font color="gree">Star</font>** 以示鼓励， 项目会 **持续更新**，谢谢你的支持。
 * 如果你发现了项目中的问题，可以提 [issue](https://github.com/minibear2333/kubernetes-book/issues) 和 [pr](https://github.com/minibear2333/kubernetes-book/pulls)
-* 你可以使用 gitbook 来 [构建此项目](./tools/gitbook.md) 方便查看，后期封版时会构建电子书
+* 你可以使用 gitbook 来 [构建此项目](./tools/gitbook.md) 方便查看，也可以[点此查看电子书](https://k8s.coding3min.com)
 
 > tips: mac 使用 <kbd>command</kbd>+ <kbd>点击链接</kbd> ，windows使用<kbd>ctrl</kbd>+<kbd>点击链接</kbd>的方式可以在新标签打开页面
-
-### 加入训练营
-
-如果你想系统的学习，可以加入训练营，会有实操和课后答疑，可以加入【云原生与微服务交流群】
-
-* [Docker 训练营](http://weike.fm/Q6V2w16556)
-* Kubernetes 训练营 - 规划中 
 
 ### Docker课程内容
 
@@ -31,8 +24,30 @@
 * 构建Docker私有仓库
 * Dockerfile最佳实践
 
-**实验链接**
-* [容器&docker入门](Docker/chapter.1/README.md)
+目录
+* [Introduction](README.md)
+* [容器&Docker入门](Docker.md)
+    - [个人简介](me.md)
+    - [容器故事](Docker/chapter.1/docker-story.md)
+    - [能解决什么问题](Docker/chapter.1/deal-what.md)
+    - [优势](Docker/chapter.1/docker-superiority.md)
+    - [镜像概念](Docker/chapter.1/what-is-image.md)
+    - [容器概念](Docker/chapter.1/what-is-docker.md)
+    - [仓库概念](Docker/chapter.1/what-is-repository.md)
+* [Docker 安装](Docker.md)
+    - [安装说明](Docker/chapter.1/安装Docker.md)
+    - [CentOS安装](Docker/chapter.1/Centos安装.md)
+    - [Windows安装](Docker/chapter.1/Windows安装.md)
+    - [Macbook安装](Docker/chapter.1/Macbook安装.md)
+    - [容器&docker入门实验](Docker/chapter.1/README.md)
+* [Docker命令](Docker/chapter.2/README.md)
+    - [基础命令](Docker/chapter.2/base-command.md)
+    - [镜像命令](Docker/chapter.2/image-command.md)
+    - [容器操作命令](Docker/chapter.2/container-command.md)
+    - [容器管理命令](Docker/chapter.2/container-command2.md)
+    - [资源命令](Docker/chapter.2/resources-command.md)
+    - [wordpress博客系统](Docker/chapter.2/lab-wordpress.md)
+    - [python文件下载系统](Docker/chapter.2/lab-python.md)
 
 ### Kubernetes
 
@@ -54,7 +69,7 @@
 
 如果你想订阅我的文章，可以微信扫码关注我的公众号【机智的程序员小熊】，我是一个爱思考的程序员，专注于开发、运维、云技术、计算、网络、云存储、数据库、linux等编程知识
 
-<img src="./images/gzh.jpg" ></img>
+![](./images/gzh.jpg)
 
 ### 知识星球
 
