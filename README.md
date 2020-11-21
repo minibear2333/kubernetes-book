@@ -84,3 +84,19 @@
 * 每周会发BAT等内推信息（主要是鹅厂），如果你经常刷脸可以帮忙简历直接给hr
 
 <img src="./images/zsxq.jpg" width="400px"></img>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+var gitalk = new Gitalk({
+  "clientID": "c8e0b04455e5b655f885",
+  "clientSecret": "579b9c2a1f33e3ef67e7abeb858c562c4b31f37f",
+  "repo": "kubernetes-book",
+  "owner": "minibear2333",
+  "admin": ["minibear2333"],
+  "id": location.pathname,      
+  "distractionFreeMode": false  
+});
+gitalk.render("gitalk-container");
+</script>
