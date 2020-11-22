@@ -1,0 +1,878 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>镜像命令 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="container-command.html" />
+    
+    
+    <link rel="prev" href="base-command.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Docker.md">
+            
+                <span>
+            
+                    
+                    容器&Docker入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../me.html">
+            
+                <a href="../../me.html">
+            
+                    
+                    个人简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter.1/docker-story.html">
+            
+                <a href="../chapter.1/docker-story.html">
+            
+                    
+                    容器故事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter.1/deal-what.html">
+            
+                <a href="../chapter.1/deal-what.html">
+            
+                    
+                    能解决什么问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter.1/docker-superiority.html">
+            
+                <a href="../chapter.1/docker-superiority.html">
+            
+                    
+                    优势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter.1/what-is-image.html">
+            
+                <a href="../chapter.1/what-is-image.html">
+            
+                    
+                    镜像概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter.1/what-is-docker.html">
+            
+                <a href="../chapter.1/what-is-docker.html">
+            
+                    
+                    容器概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter.1/what-is-repository.html">
+            
+                <a href="../chapter.1/what-is-repository.html">
+            
+                    
+                    仓库概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Docker.md">
+            
+                <span>
+            
+                    
+                    Docker 安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter.1/安装Docker.html">
+            
+                <a href="../chapter.1/安装Docker.html">
+            
+                    
+                    安装说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter.1/Centos安装.html">
+            
+                <a href="../chapter.1/Centos安装.html">
+            
+                    
+                    CentOS安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter.1/Windows安装.html">
+            
+                <a href="../chapter.1/Windows安装.html">
+            
+                    
+                    Windows安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter.1/Macbook安装.html">
+            
+                <a href="../chapter.1/Macbook安装.html">
+            
+                    
+                    Macbook安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter.1/">
+            
+                <a href="../chapter.1/">
+            
+                    
+                    容器&docker入门实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="base-command.html">
+            
+                <a href="base-command.html">
+            
+                    
+                    基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="image-command.html">
+            
+                <a href="image-command.html">
+            
+                    
+                    镜像命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="container-command.html">
+            
+                <a href="container-command.html">
+            
+                    
+                    容器操作命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="container-command2.html">
+            
+                <a href="container-command2.html">
+            
+                    
+                    容器管理命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="resources-command.html">
+            
+                <a href="resources-command.html">
+            
+                    
+                    资源命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="lab-wordpress.html">
+            
+                <a href="lab-wordpress.html">
+            
+                    
+                    wordpress博客系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="lab-python.html">
+            
+                <a href="lab-python.html">
+            
+                    
+                    python文件下载系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Docker-images.md">
+            
+                <span>
+            
+                    
+                    Docker 镜像
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter.3/c-dockerfile.html">
+            
+                <a href="../chapter.3/c-dockerfile.html">
+            
+                    
+                    Dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter.3/repositories.html">
+            
+                <a href="../chapter.3/repositories.html">
+            
+                    
+                    个人仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter.4/best-dockerfile.html">
+            
+                <a href="../chapter.4/best-dockerfile.html">
+            
+                    
+                    Dockerfile最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter.4/best-dockerfile-other.html">
+            
+                <a href="../chapter.4/best-dockerfile-other.html">
+            
+                    
+                    Dockerfile其他建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker 存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    挂载卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker Swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Kubernetes入门.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../Kubernetes/chapter.1/install-k8s.html">
+            
+                <a href="../../Kubernetes/chapter.1/install-k8s.html">
+            
+                    
+                    Kubernetes安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >镜像命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x955C;&#x50CF;&#x547D;&#x4EE4;">&#x955C;&#x50CF;&#x547D;&#x4EE4;</h1>
+<h3 id="&#x547D;&#x4EE4;&#x901F;&#x67E5;">&#x547D;&#x4EE4;&#x901F;&#x67E5;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x547D;&#x4EE4;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">images</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x672C;&#x5730;&#x955C;&#x50CF;&#xFF08;&#x5217;&#x51FA;&#x672C;&#x5730;&#x6240;&#x6709;&#x955C;&#x50CF;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">inspect</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x955C;&#x50CF;&#x8BE6;&#x60C5;</td>
+</tr>
+<tr>
+<td style="text-align:left">search</td>
+<td style="text-align:left">&#x67E5;&#x627E;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">tag</td>
+<td style="text-align:left">&#x4FEE;&#x6539;&#x955C;&#x50CF;tag</td>
+</tr>
+<tr>
+<td style="text-align:left">history</td>
+<td style="text-align:left">&#x663E;&#x793A;&#x955C;&#x50CF;&#x6BCF;&#x5C42;&#x7684;&#x53D8;&#x66F4;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:left">rmi</td>
+<td style="text-align:left">&#x5220;&#x9664;&#x672C;&#x5730;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">pull</td>
+<td style="text-align:left">&#x83B7;&#x53D6;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">push</td>
+<td style="text-align:left">&#x63A8;&#x9001;&#x955C;&#x50CF;&#x5230;&#x4ED3;&#x5E93;</td>
+</tr>
+<tr>
+<td style="text-align:left">login</td>
+<td style="text-align:left">&#x767B;&#x5F55;&#x7B2C;&#x4E09;&#x65B9;&#x4ED3;&#x5E93;</td>
+</tr>
+<tr>
+<td style="text-align:left">logout</td>
+<td style="text-align:left">&#x9000;&#x51FA;&#x7B2C;&#x4E09;&#x65B9;&#x4ED3;&#x5E93;</td>
+</tr>
+<tr>
+<td style="text-align:left">save</td>
+<td style="text-align:left">&#x6253;&#x5305;&#x672C;&#x5730;&#x955C;&#x50CF;, &#x4F7F;&#x7528;&#x538B;&#x7F29;&#x5305;&#x6765;&#x5B8C;&#x6210;&#x8FC1;&#x79FB;</td>
+</tr>
+<tr>
+<td style="text-align:left">load</td>
+<td style="text-align:left">&#x5BFC;&#x5165;&#x955C;&#x50CF;&#x538B;&#x7F29;&#x5305;</td>
+</tr>
+<tr>
+<td style="text-align:left">commit</td>
+<td style="text-align:left">&#x5C06;&#x5BB9;&#x5668;&#x4FDD;&#x5B58;&#x4E3A;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">build</td>
+<td style="text-align:left">&#x4F7F;&#x7528;Dockerfile&#x6784;&#x5EFA;&#x955C;&#x50CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">import</td>
+<td style="text-align:left">&#x5BFC;&#x5165;&#x672C;&#x5730;&#x5BB9;&#x5668;&#x5FEB;&#x7167;&#x6587;&#x4EF6;&#x4E3A;&#x955C;&#x50CF;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x67E5;&#x770B;&#x6240;&#x6709;&#x955C;&#x50CF;-images&#x547D;&#x4EE4;">&#x67E5;&#x770B;&#x6240;&#x6709;&#x955C;&#x50CF; images&#x547D;&#x4EE4;</h3>
+<p>&#x9ED8;&#x8BA4;&#x7684;docker images &#x547D;&#x4EE4;&#x5C06;&#x663E;&#x793A;&#x6240;&#x6709;&#x9876;&#x7EA7;&#x955C;&#x50CF;&#xFF0C;&#x5176;&#x5B58;&#x50A8;&#x5E93;&#x548C;&#x6807;&#x7B7E;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<pre><code class="lang-BASH">docker  images  [OPTIONS]  [REPOSITORY[:TAG]]
+</code></pre>
+<p>SIZE&#x662F;&#x955C;&#x50CF;&#x53CA;&#x5176;&#x6240;&#x6709;&#x7236;&#x955C;&#x50CF;&#x5360;&#x7528;&#x7684;&#x7D2F;&#x79EF;&#x7A7A;&#x95F4;&#x3002; &#x8FD9;&#x4E5F;&#x662F;Docker save&#x547D;&#x4EE4;&#x5236;&#x4F5C;&#x955C;&#x50CF;&#x65F6;&#x521B;&#x5EFA;&#x7684;Tar&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4F7F;&#x7528;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x3002;</p>
+<pre><code class="lang-BASH">$ docker images
+REPOSITORY                              TAG                                              IMAGE ID            CREATED             SIZE
+minibear2333/nginx                      hello                                            089ad90ddb16        8 days ago          133MB
+</code></pre>
+<p>&#x8FC7;&#x6EE4;&#x67E5;&#x8BE2;</p>
+<pre><code class="lang-BASH">$ docker images istio/pilot
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+istio/pilot         0.7.1               6223c9364df7        10 months ago       51.9MB
+
+$ docker images istio/*
+REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
+istio/mixer                              0.7.1               251b0d3d2b93        10 months ago       54MB
+istio/pilot         0.7.1               6223c9364df7        10 months ago       51.9MB
+...
+</code></pre>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x79CD; <code>--filter</code> &#x7684;&#x65B9;&#x5F0F;&#x6765;&#x67E5;&#x8BE2;&#x4E0D;&#x540C;&#x72B6;&#x6001;&#xFF0C;&#x5F80;&#x5F80;&#x53EF;&#x4EE5;&#x7528; <code>grep</code> &#x6765;&#x4EE3;&#x66FF;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x81EA;&#x884C;<a href="https://docs.docker.com/engine/reference/commandline/images/" target="_blank">&#x5B98;&#x7F51;</a>&#x5B66;&#x4E60;</p>
+<h3 id="&#x641C;&#x7D22;&#x955C;&#x50CF;">&#x641C;&#x7D22;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-BASH">docker  search  [OPTIONS]  TERM
+</code></pre>
+<p><a href="https://docs.docker.com/engine/reference/commandline/search/" target="_blank">https://docs.docker.com/engine/reference/commandline/search/</a></p>
+<p>&#x5F53;&#x524D;&#x652F;&#x6301;&#x7684;&#x8FC7;&#x6EE4;&#x5668;&#x6709;&#xFF1A;</p>
+<p><code>is-official</code> &#x662F;&#x5426;&#x5B98;&#x65B9;</p>
+<pre><code class="lang-BASH">$ docker search busybox <span class="hljs-_">-f</span> <span class="hljs-string">&quot;is-official=true&quot;</span>
+NAME                DESCRIPTION           STARS               OFFICIAL            AUTOMATED
+busybox             Busybox base image.   2035                [OK]
+</code></pre>
+<p><code>is-automated</code> &#x662F;&#x5426;&#x81EA;&#x52A8;&#x751F;&#x6210;</p>
+<pre><code class="lang-BASH">$ docker search --filter is-automated=<span class="hljs-literal">true</span> busybox
+
+NAME                 DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+progrium/busybox                                                     50                   [OK]
+radial/busyboxplus   Full-chain, Internet enabled, busybox made...   8                    [OK]
+</code></pre>
+<p><code>star</code> &#x6570;&#xFF0C;&#x610F;&#x601D;&#x662F;&#x81F3;&#x5C11;&#x6709;&#x591A;&#x5C11;&#x4E2A; <code>star</code> &#x6570;</p>
+<pre><code class="lang-BASH">$ docker search --filter stars=3 busybox
+
+NAME                 DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+busybox              Busybox base image.                             325       [OK]
+progrium/busybox                                                     50                   [OK]
+radial/busyboxplus   Full-chain, Internet enabled, busybox made...   8                    [OK]
+</code></pre>
+<h3 id="&#x955C;&#x50CF;&#x6807;&#x7B7E;">&#x955C;&#x50CF;&#x6807;&#x7B7E;</h3>
+<p><a href="https://docs.docker.com/engine/reference/commandline/tag/" target="_blank">https://docs.docker.com/engine/reference/commandline/tag/</a></p>
+<pre><code class="lang-BASH">docker  tag  SOURCE_IMAGE[:TAG]  TARGET_IMAGE[:TAG]
+</code></pre>
+<pre><code class="lang-BASH">docker tag xxxx abc:1.0
+</code></pre>
+<p>&#x5F53;&#x524D;&#x4E5F;&#x53EF;&#x4EE5;&#x91CD;&#x547D;&#x540D;</p>
+<pre><code class="lang-BASH">docker tag minibear2333/gitbook-export:0.0.1 minibear2333/gitbook:latest
+</code></pre>
+<h3 id="&#x955C;&#x50CF;&#x5386;&#x53F2;&#x53D8;&#x66F4;">&#x955C;&#x50CF;&#x5386;&#x53F2;&#x53D8;&#x66F4;</h3>
+<p>&#x663E;&#x793A;&#x955C;&#x50CF;&#x7684;&#x5386;&#x53F2;&#xFF0C;&#x663E;&#x793A;&#x955C;&#x50CF;&#x6BCF;&#x5C42;&#x7684;&#x53D8;&#x66F4;&#x5185;&#x5BB9;</p>
+<p><a href="https://docs.docker.com/engine/reference/commandline/history/" target="_blank">https://docs.docker.com/engine/reference/commandline/history/</a></p>
+<pre><code class="lang-BASH">docker <span class="hljs-built_in">history</span> [OPTIONS] IMAGE
+</code></pre>
+<p>&#x5982;&#x679C;&#x52A0; <code>--no-trunc</code> &#x53C2;&#x6570;&#x4F1A;&#x6253;&#x5370;&#x51FA;&#x5168;&#x90E8;&#x7684;&#x5185;&#x90E8;</p>
+<pre><code class="lang-BASH">$ docker <span class="hljs-built_in">history</span> minibear2333/gitbook-export:latest
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+852e99c1aba1        13 days ago         CMD [<span class="hljs-string">&quot;/bin/sh&quot;</span> <span class="hljs-string">&quot;-c&quot;</span> <span class="hljs-string">&quot;mv /genbook.sh . &amp;&amp; chm&#x2026;   0B                  buildkit.dockerfile.v0
+&lt;missing&gt;           13 days ago         WORKDIR /home                                   0B                  buildkit.dockerfile.v0
+&lt;missing&gt;           13 days ago         MAINTAINER minibear2333 &quot;</span>coding3min@foxmail.&#x2026;   0B                  buildkit.dockerfile.v0
+&lt;missing&gt;           13 days ago         bash                                            21.4MB              
+.......
+/bin/sh -c <span class="hljs-comment">#(nop)  CMD [&quot;/bin/bash&quot;]            0B</span>
+&lt;missing&gt;           3 months ago        /bin/sh -c <span class="hljs-comment">#(nop)  LABEL org.label-schema.sc&#x2026;   0B</span>
+&lt;missing&gt;           3 months ago        /bin/sh -c <span class="hljs-comment">#(nop) ADD file:538afc0c5c964ce0d&#x2026;   215MB</span>
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x955C;&#x50CF;">&#x5220;&#x9664;&#x955C;&#x50CF;</h3>
+<p><a href="https://docs.docker.com/engine/reference/commandline/rmi/" target="_blank">https://docs.docker.com/engine/reference/commandline/rmi/</a></p>
+<p>&#x76F4;&#x63A5;&#x52A0;&#x955C;&#x50CF;id&#x5C31;&#x884C;</p>
+<pre><code class="lang-BASH">docker  rmi [OPTIONS]  IMAGE  [IMAGE...]
+</code></pre>
+<h3 id="&#x4E0A;&#x4F20;&#x955C;&#x50CF;">&#x4E0A;&#x4F20;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-BASH">docker  push  [OPTIONS]  NAME[:TAG]
+</code></pre>
+<h3 id="&#x4E0B;&#x8F7D;&#x955C;&#x50CF;">&#x4E0B;&#x8F7D;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-BASH">docker  pull  [OPTIONS]  NAME[:TAG]
+</code></pre>
+<h3 id="&#x63D0;&#x4EA4;&#x955C;&#x50CF;">&#x63D0;&#x4EA4;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-BASH">docker  commit [OPTIONS]  CONTAINER  NAME[:TAG]
+</code></pre>
+<h3 id="&#x6784;&#x5EFA;&#x955C;&#x50CF;">&#x6784;&#x5EFA;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-BASH">docker  build  [OPTIONS]  PATH
+</code></pre>
+<h3 id="&#x516C;&#x4F17;&#x53F7;">&#x516C;&#x4F17;&#x53F7;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8BA2;&#x9605;&#x6211;&#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x53EF;&#x4EE5;&#x5FAE;&#x4FE1;&#x626B;&#x7801;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;&#x3010;&#x673A;&#x667A;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x5C0F;&#x718A;&#x3011;&#xFF0C;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x7231;&#x601D;&#x8003;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x4E13;&#x6CE8;&#x4E8E;&#x5F00;&#x53D1;&#x3001;&#x8FD0;&#x7EF4;&#x3001;&#x4E91;&#x6280;&#x672F;&#x3001;&#x8BA1;&#x7B97;&#x3001;&#x7F51;&#x7EDC;&#x3001;&#x4E91;&#x5B58;&#x50A8;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;linux&#x7B49;&#x7F16;&#x7A0B;&#x77E5;&#x8BC6;</p>
+<p><img src="images/gzh.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="base-command.html" class="navigation navigation-prev " aria-label="Previous page: 基础命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="container-command.html" class="navigation navigation-next " aria-label="Next page: 容器操作命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"镜像命令","level":"1.4.2","depth":2,"next":{"title":"容器操作命令","level":"1.4.3","depth":2,"path":"Docker/chapter.2/container-command.md","ref":"Docker/chapter.2/container-command.md","articles":[]},"previous":{"title":"基础命令","level":"1.4.1","depth":2,"path":"Docker/chapter.2/base-command.md","ref":"Docker/chapter.2/base-command.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker/chapter.2/image-command.md","mtime":"2020-11-22T13:07:14.694Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-22T13:08:10.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

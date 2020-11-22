@@ -1,0 +1,853 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Dockerfile最佳实践 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="best-dockerfile-other.html" />
+    
+    
+    <link rel="prev" href="../chapter.3/repositories.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Docker.md">
+            
+                <span>
+            
+                    
+                    容器&Docker入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../me.html">
+            
+                <a href="../../me.html">
+            
+                    
+                    个人简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter.1/docker-story.html">
+            
+                <a href="../chapter.1/docker-story.html">
+            
+                    
+                    容器故事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter.1/deal-what.html">
+            
+                <a href="../chapter.1/deal-what.html">
+            
+                    
+                    能解决什么问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter.1/docker-superiority.html">
+            
+                <a href="../chapter.1/docker-superiority.html">
+            
+                    
+                    优势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter.1/what-is-image.html">
+            
+                <a href="../chapter.1/what-is-image.html">
+            
+                    
+                    镜像概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter.1/what-is-docker.html">
+            
+                <a href="../chapter.1/what-is-docker.html">
+            
+                    
+                    容器概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter.1/what-is-repository.html">
+            
+                <a href="../chapter.1/what-is-repository.html">
+            
+                    
+                    仓库概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Docker.md">
+            
+                <span>
+            
+                    
+                    Docker 安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter.1/安装Docker.html">
+            
+                <a href="../chapter.1/安装Docker.html">
+            
+                    
+                    安装说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter.1/Centos安装.html">
+            
+                <a href="../chapter.1/Centos安装.html">
+            
+                    
+                    CentOS安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter.1/Windows安装.html">
+            
+                <a href="../chapter.1/Windows安装.html">
+            
+                    
+                    Windows安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter.1/Macbook安装.html">
+            
+                <a href="../chapter.1/Macbook安装.html">
+            
+                    
+                    Macbook安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter.1/">
+            
+                <a href="../chapter.1/">
+            
+                    
+                    容器&docker入门实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter.2/">
+            
+                <a href="../chapter.2/">
+            
+                    
+                    Docker命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter.2/base-command.html">
+            
+                <a href="../chapter.2/base-command.html">
+            
+                    
+                    基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter.2/image-command.html">
+            
+                <a href="../chapter.2/image-command.html">
+            
+                    
+                    镜像命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter.2/container-command.html">
+            
+                <a href="../chapter.2/container-command.html">
+            
+                    
+                    容器操作命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter.2/container-command2.html">
+            
+                <a href="../chapter.2/container-command2.html">
+            
+                    
+                    容器管理命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter.2/resources-command.html">
+            
+                <a href="../chapter.2/resources-command.html">
+            
+                    
+                    资源命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter.2/lab-wordpress.html">
+            
+                <a href="../chapter.2/lab-wordpress.html">
+            
+                    
+                    wordpress博客系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter.2/lab-python.html">
+            
+                <a href="../chapter.2/lab-python.html">
+            
+                    
+                    python文件下载系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Docker-images.md">
+            
+                <span>
+            
+                    
+                    Docker 镜像
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter.3/c-dockerfile.html">
+            
+                <a href="../chapter.3/c-dockerfile.html">
+            
+                    
+                    Dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter.3/repositories.html">
+            
+                <a href="../chapter.3/repositories.html">
+            
+                    
+                    个人仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="best-dockerfile.html">
+            
+                <a href="best-dockerfile.html">
+            
+                    
+                    Dockerfile最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="best-dockerfile-other.html">
+            
+                <a href="best-dockerfile-other.html">
+            
+                    
+                    Dockerfile其他建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker 存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    挂载卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker Swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Kubernetes入门.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../Kubernetes/chapter.1/install-k8s.html">
+            
+                <a href="../../Kubernetes/chapter.1/install-k8s.html">
+            
+                    
+                    Kubernetes安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Dockerfile最佳实践</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dockerfile-&#x6700;&#x4F73;&#x5B9E;&#x8DF5;">Dockerfile &#x6700;&#x4F73;&#x5B9E;&#x8DF5;</h1>
+<p>&#x6839;&#x636E;&#x4E0A;&#x6B21;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x652F;&#x6491;&#x5DE5;&#x4F5C;&#x9700;&#x8981;&#x6765;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x6784;&#x5EFA; <code>Docker</code> &#x955C;&#x50CF;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CE8;&#x610F;&#x4E00;&#x4E9B;&#x7EC6;&#x8282;&#xFF0C;&#x4E0D;&#x7528;&#x82B1;&#x592A;&#x591A;&#x65F6;&#x95F4;&#x4E5F;&#x53EF;&#x4EE5;&#x5E26;&#x6765;&#x5F88;&#x5927;&#x7684;&#x597D;&#x5904;&#x3002;</p>
+<h3 id="&#x539F;&#x5219;&#x4E0E;&#x505A;&#x6CD5;">&#x539F;&#x5219;&#x4E0E;&#x505A;&#x6CD5;</h3>
+<p>&#x539F;&#x5219;&#x4E0A;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x8BA9;&#x5176;&#xFF1A;</p>
+<ul>
+<li>&#x4F53;&#x79EF;&#x5C0F;</li>
+<li>&#x8F7B;&#x91CF;&#x5316;</li>
+</ul>
+<p>&#x4E3A;&#x6B64;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x505A;&#x5230;&#xFF1A;</p>
+<ul>
+<li>&#x5C3D;&#x53EF;&#x80FD;&#x4E0D;&#x8981;&#x8BA9;&#x7F13;&#x5B58;&#x5931;&#x6548;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;&#x7F13;&#x5B58;</li>
+<li>&#x6784;&#x5EFA;<strong>&#x5C42;&#x6570;&#x8D8A;&#x5C11;&#x8D8A;&#x597D;</strong>&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x5408;&#x5E76;&#x5C31;&#x5408;&#x5E76;</li>
+<li>&#x9632;&#x6B62;&#x91CD;&#x590D;&#x5BFC;&#x5165;&#x5305;&#xFF0C;&#x5BF9;&#x7EED;&#x884C;&#x7684;&#x53C2;&#x6570;&#x6309;&#x7167;&#x5B57;&#x6BCD;&#x8868;&#x6392;&#x5E8F;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x4F7F;&#x7528; <code>apt-get install -y</code> &#x5B89;&#x88C5;&#x5305;&#x7684;&#x65F6;&#x5019;&#x3002;</li>
+<li>&#x907F;&#x514D;&#x5783;&#x573E;&#x6587;&#x4EF6;&#xFF0C;<strong>&#x4EC5;&#x5B89;&#x88C5;</strong>&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x53CA;&#x65F6;&#x5220;&#x9664;&#x591A;&#x4F59;&#x6587;&#x4EF6;&#xFF0C;&#x5FC5;&#x8981;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528; <code>.dockerignore</code>&#xFF0C;&#x5FFD;&#x7565;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x6784;&#x5EFA;&#x7684;&#x6587;&#x4EF6;</li>
+<li>&#x5355;&#x4E00;&#x804C;&#x8D23;&#xFF0C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x53EA;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#xFF0C;&#x628A;&#x4E0D;&#x540C;&#x6A21;&#x5757;&#x5206;&#x5F00;</li>
+</ul>
+<h3 id="&#x7F13;&#x5B58;&#x539F;&#x7406;">&#x7F13;&#x5B58;&#x539F;&#x7406;</h3>
+<p><code>docker</code> &#x5BFB;&#x627E;&#x7F13;&#x5B58;&#x7684;&#x903B;&#x8F91;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6811;&#x578B;&#x7ED3;&#x6784;&#x6839;&#x636E; <code>Dockerfile</code> &#x6307;&#x4EE4;&#x904D;&#x5386;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x4E0B;&#x56FE;&#x53EF;&#x4EE5;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x903B;&#x8F91;&#x3002;</p>
+<pre><code class="lang-Dockerfile">     <span class="hljs-keyword">FROM</span> base_image:version    Dockerfile:
+           +----------+         <span class="hljs-keyword">FROM</span> base_image:version
+           |base image|         <span class="hljs-keyword">RUN</span> cmd1  --&gt; use cache because we found base image
+           +-----X----+         <span class="hljs-keyword">RUN</span> cmd11 --&gt; use cache because we found cmd1
+                / \
+               /   \
+       <span class="hljs-keyword">RUN</span> <span class="bash">cmd1     RUN cmd2    Dockerfile:
+</span>       +------+     +------+    <span class="hljs-keyword">FROM</span> base_image:version
+       |image1|     |image2|    <span class="hljs-keyword">RUN</span> cmd2  --&gt; use cache because we found base image
+       +---X--+     +------+    <span class="hljs-keyword">RUN</span> cmd21 --&gt; not use cache because there&apos;s no child node
+          / \                   running cmd21, so we build a new image here
+         /   \
+<span class="hljs-keyword">RUN</span> <span class="bash">cmd11     RUN cmd12
+</span>+-------+     +-------+
+|image11|     |image12|
++-------+     +-------+
+</code></pre>
+<p>&#x5927;&#x90E8;&#x5206;&#x6307;&#x4EE4;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x903B;&#x8F91;&#x53BB;&#x5BFB;&#x627E;&#x7F13;&#x5B58;&#xFF0C;&#x9664;&#x4E86; <code>ADD</code> &#x548C; <code>COPY</code> &#x3002;</p>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x4EE4;&#x4F1A;&#x590D;&#x5236;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5230;&#x955C;&#x50CF;&#x5185;&#xFF0C;&#x9664;&#x4E86;&#x6307;&#x4EE4;&#x76F8;&#x540C;&#x4EE5;&#x5916;&#xFF0C; <code>docker</code> &#x8FD8;&#x4F1A;<strong>&#x68C0;&#x67E5;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x6821;&#x9A8C;&#x548C;</strong>(&#x4E0D;&#x5305;&#x62EC;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x548C;&#x6700;&#x540E;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;)&#xFF0C;&#x5982;&#x679C;&#x6821;&#x9A8C;&#x548C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x3002;</p>
+<h3 id="&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;&#x7F13;&#x5B58;">&#x5C0F;&#x5FC3;&#x4F7F;&#x7528;&#x7F13;&#x5B58;</h3>
+<ul>
+<li>&#x9664;&#x4E86; <code>ADD</code> &#x548C; <code>COPY</code> &#x8FD9;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C; &#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x90FD;&#x4E0D;&#x4F1A;&#x53BB;&#x68C0;&#x67E5;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982; <code>RUN apt-get -y update</code> &#xFF0C;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x65F6;&#x56E0;&#x4E3A;&#x5305;&#x5185;&#x5BB9;&#x66F4;&#x65B0;&#xFF0C;&#x6587;&#x4EF6;&#x53EF;&#x80FD;&#x90FD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F; <code>docker</code> &#x4F1A;&#x8BA4;&#x4E3A;&#x547D;&#x4EE4;&#x662F;&#x4E00;&#x81F4;&#xFF0C;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x3002;&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x4EE5;&#x540E;&#x6784;&#x5EFA;&#x65F6;&#x90FD;&#x4E0D;&#x4F1A;&#x518D;&#x91CD;&#x65B0;&#x8FD0;&#x884C; <code>apt-get -y update</code> &#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;<strong>&#x6307;&#x4EE4;&#x5B57;&#x7B26;&#x4E32;&#x672C;&#x8EAB;</strong>&#x88AB;&#x7528;&#x6765;&#x5339;&#x914D;&#x7F13;&#x5B58;&#x3002;</li>
+<li>&#x4ECE;<code>Dockerfile</code>&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x5F00;&#x59CB;&#xFF0C;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x8981;&#x548C;&#x5DF2;&#x6709;&#x5B50;&#x955C;&#x50CF;&#x7684;&#x547D;&#x4EE4;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x8981;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x7F13;&#x5B58;&#x5C31;&#x5931;&#x6548;&#x4E86;&#x3002;</li>
+<li>&#x5982;&#x679C; <code>docker</code> &#x6CA1;&#x6709;&#x627E;&#x5230;&#x5F53;&#x524D;&#x6307;&#x4EE4;&#x7684;&#x7F13;&#x5B58;&#xFF0C;&#x5219;&#x4F1A;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x4E14;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x6307;&#x4EE4;&#x90FD;&#x4E0D;&#x4F1A;&#x518D;&#x53BB;&#x627E;&#x7F13;&#x5B58;&#x3002;</li>
+<li>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728; <code>docker build</code> &#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528; <code>--no-cache=true</code> &#x9009;&#x9879;&#xFF0C;&#x6765;&#x653E;&#x5F03;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x3002;</li>
+</ul>
+<h3 id="&#x6784;&#x5EFA;&#x5C42;&#x6570;&#x8D8A;&#x5C11;&#x8D8A;&#x597D;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x5408;&#x5E76;&#x5C31;&#x5408;&#x5E76;&#xFF08;run&#x3001;label&#xFF09;">&#x6784;&#x5EFA;&#x5C42;&#x6570;&#x8D8A;&#x5C11;&#x8D8A;&#x597D;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x5408;&#x5E76;&#x5C31;&#x5408;&#x5E76;&#xFF08;RUN&#x3001;LABEL&#xFF09;</h3>
+<p>&#x4E0A;&#x9762;&#x7684;&#x95EE;&#x9898;&#x5E38;&#x89C1;&#x7684;&#x4F8B;&#x5B50;&#x5C31;&#x662F;</p>
+<pre><code class="lang-Dockerfile">...
+<span class="hljs-keyword">RUN</span> <span class="bash">apt-get -y update
+</span><span class="hljs-keyword">RUN</span> <span class="bash">apt-get install -y curl
+</span></code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x5B89;&#x88C5;&#x65B0;&#x5305;&#x65F6;&#xFF0C;&#x53D1;&#x73B0; <code>RUN apt-get -y update</code> &#x5C42;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#xFF0C;&#x5219;&#x547D;&#x4E2D;&#x7F13;&#x5B58;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FD0;&#x884C;&#xFF0C;&#x540E;&#x9762;&#x7684; <code>apt-get install</code> &#x53EF;&#x80FD;&#x5B89;&#x88C5;&#x7684;&#x662F;&#x8FC7;&#x65F6;&#x7684; <code>curl</code> &#x548C; <code>nginx</code> &#x7248;&#x672C;&#x3002;</p>
+<pre><code class="lang-Dockerfile">...
+<span class="hljs-keyword">RUN</span> <span class="bash">apt-get -y update
+</span><span class="hljs-keyword">RUN</span> <span class="bash">apt-get install -y curl nginx
+</span></code></pre>
+<p>&#x8FD9;&#x662F;&#x5EFA;&#x8BAE;&#x5C31;&#x662F;&#x5408;&#x5E76;&#x4E8C;&#x8005;&#xFF0C;&#x8FD9;&#x4E9B;&#x53EA;&#x8981;&#x5B89;&#x88C5;&#x65B0;&#x5305;&#x4E5F;&#x4F1A;&#x66F4;&#x65B0;</p>
+<pre><code class="lang-Dockerfile"><span class="hljs-keyword">RUN</span> <span class="bash">apt-get -y update &amp;&amp; apt-get install -y curl nginx
+</span></code></pre>
+<p>&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x5408;&#x5E76;&#x51CF;&#x5C11;&#x5C42;&#x6570;</p>
+<pre><code class="lang-Dockerfile"><span class="hljs-keyword">LABEL</span> <span class="bash">vendor=ACME\ Incorporated \
+      com.example.is-production=<span class="hljs-string">&quot;&quot;</span> \
+      com.example.version=<span class="hljs-string">&quot;0.0.1-beta&quot;</span> \
+      com.example.release-date=<span class="hljs-string">&quot;2015-02-12&quot;</span>
+</span></code></pre>
+<h3 id="&#x9632;&#x6B62;&#x91CD;&#x590D;&#x5BFC;&#x5165;&#x5305;&#xFF0C;&#x5BF9;&#x7EED;&#x884C;&#x7684;&#x53C2;&#x6570;&#x6309;&#x7167;&#x5B57;&#x6BCD;&#x8868;&#x6392;&#x5E8F;">&#x9632;&#x6B62;&#x91CD;&#x590D;&#x5BFC;&#x5165;&#x5305;&#xFF0C;&#x5BF9;&#x7EED;&#x884C;&#x7684;&#x53C2;&#x6570;&#x6309;&#x7167;&#x5B57;&#x6BCD;&#x8868;&#x6392;&#x5E8F;</h3>
+<p>&#x8FD9;&#x6837;&#x5B50;&#x6392;&#x5E8F;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x5C31;&#x770B;&#x51FA;&#x6765;&#x6709;&#x6CA1;&#x6709;&#x5199;&#x91CD;&#x590D;&#x7684;&#x5730;&#x65B9;</p>
+<pre><code class="lang-Dockerfile"><span class="hljs-keyword">RUN</span> <span class="bash">apt-get update &amp;&amp; apt-get install -y \
+    aufs-tools \
+    automake \
+    build-essential \
+    curl \
+    dpkg-sig \
+    libcap-dev \
+    libsqlite3-dev \
+    mercurial \
+    reprepro \
+    ruby1.9.1 \
+    ruby1.9.1-dev \
+    s3cmd=1.1.*
+</span></code></pre>
+<h3 id="&#x907F;&#x514D;&#x5783;&#x573E;&#x6587;&#x4EF6;">&#x907F;&#x514D;&#x5783;&#x573E;&#x6587;&#x4EF6;</h3>
+<p>&#x4EC5;&#x5B89;&#x88C5;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x53CA;&#x65F6;&#x5220;&#x9664;&#x591A;&#x4F59;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8FD8;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x6E05;&#x7406;&#x6389; <code>apt</code> &#x7F13;&#x5B58; <code>var/lib/apt/lists</code> &#x53EF;&#x4EE5;&#x51CF;&#x5C0F;&#x955C;&#x50CF;&#x5927;&#x5C0F;&#x3002;&#x56E0;&#x4E3A; <code>RUN</code> &#x6307;&#x4EE4;&#x7684;&#x5F00;&#x5934;&#x4E3A; <code>apt-get udpate</code> &#xFF0C;&#x5305;&#x7F13;&#x5B58;&#x603B;&#x662F;&#x4F1A;&#x5728; <code>apt-get install</code> &#x4E4B;&#x524D;&#x5237;&#x65B0;&#x3002;</p>
+<pre><code class="lang-Dockerfile"><span class="hljs-keyword">RUN</span> <span class="bash">apt-get update &amp;&amp; apt-get install -y \
+    aufs-tools \
+    automake \
+    build-essential \
+    curl \
+    dpkg-sig \
+    libcap-dev \
+    libsqlite3-dev \
+    mercurial \
+    reprepro \
+    ruby1.9.1 \
+    ruby1.9.1-dev \
+    s3cmd=1.1.* \
+ <span class="hljs-comment"># &#x5176;&#x4ED6;&#x64CD;&#x4F5C;</span>
+</span> &amp;&amp; rm -rf /var/lib/apt/lists/*
+</code></pre>
+<p>&#x5FC5;&#x8981;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528; <code>.dockerignore</code> &#xFF0C;&#x5FFD;&#x7565;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x6784;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x6BD4;&#x5982; <code>docker</code> &#x6784;&#x5EFA;&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E0D;&#x60F3;&#x52A0;&#x5165;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E0D;&#x7136;&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x52A0;&#x5165;&#x5230;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x6700;&#x540E;&#x6253;&#x5165;&#x5230;&#x955C;&#x50CF;&#x91CC;&#xFF0C;&#x663E;&#x5F97;&#x955C;&#x50CF;&#x5F88;&#x5927;&#x3002;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x56DE;&#x770B;&#x4E0A;&#x4E00;&#x7BC7;&#x3002;</p>
+<h3 id="&#x5355;&#x4E00;&#x804C;&#x8D23;">&#x5355;&#x4E00;&#x804C;&#x8D23;</h3>
+<p>&#x6BCF;&#x4E2A;&#x5BB9;&#x5668;&#x5E94;&#x7528;&#x53EA;&#x5173;&#x5FC3;&#x4E00;&#x4E2A;&#x65B9;&#x9762;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x5C06;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#x89E3;&#x8026;&#x5230;&#x4E0D;&#x540C;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x8F7B;&#x677E;&#x5730;&#x4FDD;&#x8BC1;&#x5BB9;&#x5668;&#x7684;&#x6A2A;&#x5411;&#x6269;&#x5C55;&#x548C;&#x590D;&#x7528;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4E00;&#x4E2A; <code>web</code> &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x4E09;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5BB9;&#x5668;&#xFF1A; <code>web</code> &#x5E94;&#x7528;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x7F13;&#x5B58;&#xFF0C;&#x6BCF;&#x4E2A;&#x5BB9;&#x5668;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x5206;&#x5F00;&#x8FD0;&#x884C;&#x3002;&#x4F46;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x5C31;&#x53EA;&#x80FD;&#x8DD1;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x6709;&#x7684;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x4F1A;&#x81EA;&#x884C;&#x4EA7;&#x751F;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#xFF0C;</p>
+<p>&#x867D;&#x7136;&#x6BCF;&#x4E2A;&#x5BB9;&#x5668;&#x8DD1;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x662F;&#x4E00;&#x6761;&#x5F88;&#x597D;&#x7684;&#x6CD5;&#x5219;&#xFF0C;&#x4F46;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x6761;&#x786C;&#x6027;&#x7684;&#x89C4;&#x5B9A;&#x3002;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x662F;&#x5E0C;&#x671B;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x53EA;&#x5173;&#x6CE8;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#xFF0C;&#x5C3D;&#x91CF;&#x4FDD;&#x6301;&#x5E72;&#x51C0;&#x548C;&#x6A21;&#x5757;&#x5316;&#x3002;</p>
+<h3 id="&#x591A;&#x9636;&#x6BB5;&#x6784;&#x5EFA;">&#x591A;&#x9636;&#x6BB5;&#x6784;&#x5EFA;</h3>
+<p>&#x591A;&#x9636;&#x6BB5;&#x6784;&#x5EFA;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x5927;&#x5E45;&#x5EA6;&#x51CF;&#x5C0F;&#x6700;&#x7EC8;&#x7684;&#x955C;&#x50CF;&#x5927;&#x5C0F;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x60F3;&#x529E;&#x6CD5;&#x51CF;&#x5C11;&#x4E2D;&#x95F4;&#x5C42;&#x548C;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x91CF;&#x3002;&#x56E0;&#x4E3A;&#x955C;&#x50CF;&#x662F;&#x5728;&#x751F;&#x6210;&#x8FC7;&#x7A0B;&#x7684;&#x6700;&#x540E;&#x9636;&#x6BB5;&#x751F;&#x6210;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x751F;&#x6210;&#x7F13;&#x5B58;&#x6765;&#x6700;&#x5C0F;&#x5316;&#x955C;&#x50CF;&#x5C42;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x6784;&#x5EFA;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5C42;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x4ECE;&#x53D8;&#x5316;&#x9891;&#x7387;&#x8F83;&#x4F4E;&#xFF08;&#x4EE5;&#x786E;&#x4FDD;&#x751F;&#x6210;&#x7F13;&#x5B58;&#x53EF;&#x91CD;&#x7528;&#xFF09;&#x5230;&#x53D8;&#x5316;&#x9891;&#x7387;&#x8F83;&#x9AD8;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#xFF1A;</p>
+<ul>
+<li>&#x5B89;&#x88C5;&#x6784;&#x5EFA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6240;&#x9700;&#x7684;&#x4F9D;&#x8D56;&#x5DE5;&#x5177;</li>
+<li>&#x5B89;&#x88C5;&#x6216;&#x66F4;&#x65B0;&#x4F9D;&#x8D56;&#x9879;</li>
+<li>&#x6784;&#x5EFA;&#x4F60;&#x7684;&#x5E94;&#x7528;</li>
+</ul>
+<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6784;&#x5EFA;&#x4E00;&#x4E2A; Go &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; Dockerfile &#x53EF;&#x80FD;&#x7C7B;&#x4F3C;&#x4E8E;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-Dockerfile"><span class="hljs-keyword">FROM</span> golang:<span class="hljs-number">1.11</span>-alpine AS build
+
+<span class="hljs-comment"># &#x5B89;&#x88C5;&#x9879;&#x76EE;&#x9700;&#x8981;&#x7684;&#x5DE5;&#x5177;</span>
+<span class="hljs-comment"># &#x8FD0;&#x884C; `docker build --no-cache .` &#x6765;&#x66F4;&#x65B0;&#x4F9D;&#x8D56;</span>
+<span class="hljs-keyword">RUN</span> <span class="bash">apk add --no-cache git
+</span><span class="hljs-keyword">RUN</span> <span class="bash">go get github.com/golang/dep/cmd/dep
+</span>
+<span class="hljs-comment"># &#x901A;&#x8FC7; Gopkg.toml &#x548C; Gopkg.lock &#x83B7;&#x53D6;&#x9879;&#x76EE;&#x7684;&#x4F9D;&#x8D56;</span>
+<span class="hljs-comment"># &#x4EC5;&#x5728;&#x66F4;&#x65B0; Gopkg &#x6587;&#x4EF6;&#x65F6;&#x624D;&#x91CD;&#x65B0;&#x6784;&#x5EFA;&#x8FD9;&#x4E9B;&#x5C42;</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">Gopkg.lock Gopkg.toml /go/src/project/
+</span><span class="hljs-keyword">WORKDIR</span> <span class="bash">/go/src/project/
+</span><span class="hljs-comment"># &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;</span>
+<span class="hljs-keyword">RUN</span> <span class="bash">dep ensure -vendor-only
+</span>
+<span class="hljs-comment"># &#x62F7;&#x8D1D;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x6784;&#x5EFA;</span>
+<span class="hljs-comment"># &#x5F53;&#x9879;&#x76EE;&#x4E0B;&#x9762;&#x6709;&#x6587;&#x4EF6;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#x8BE5;&#x5C42;&#x624D;&#x4F1A;&#x91CD;&#x65B0;&#x6784;&#x5EFA;</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">. /go/src/project/
+</span><span class="hljs-keyword">RUN</span> <span class="bash">go build -o /bin/project
+</span>
+<span class="hljs-comment"># &#x5C06;&#x6253;&#x5305;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230; scratch &#x955C;&#x50CF;&#x4E0B;&#x9762;&#xFF0C;&#x5C06;&#x955C;&#x50CF;&#x5927;&#x5C0F;&#x964D;&#x5230;&#x6700;&#x4F4E;</span>
+<span class="hljs-keyword">FROM</span> scratch
+<span class="hljs-keyword">COPY</span> <span class="bash">--from=build /bin/project /bin/project
+</span><span class="hljs-keyword">ENTRYPOINT</span> <span class="bash">[<span class="hljs-string">&quot;/bin/project&quot;</span>]
+</span><span class="hljs-keyword">CMD</span> <span class="bash">[<span class="hljs-string">&quot;--help&quot;</span>]
+</span></code></pre>
+<p>&#x66F4;&#x591A;&#x4E24;&#x9636;&#x6BB5; <code>go</code> &#x8BED;&#x8A00;&#x9879;&#x76EE;&#x6253;&#x5305;&#x65B9;&#x6CD5; <a href="https://coding3min.com/1231.html" target="_blank">Golang&#x6253;&#x955C;&#x50CF;Dockerfile&#x7684;&#x5199;&#x6CD5;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter.3/repositories.html" class="navigation navigation-prev " aria-label="Previous page: 个人仓库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="best-dockerfile-other.html" class="navigation navigation-next " aria-label="Next page: Dockerfile其他建议">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dockerfile最佳实践","level":"1.5.3","depth":2,"next":{"title":"Dockerfile其他建议","level":"1.5.4","depth":2,"path":"Docker/chapter.4/best-dockerfile-other.md","ref":"Docker/chapter.4/best-dockerfile-other.md","articles":[]},"previous":{"title":"个人仓库","level":"1.5.2","depth":2,"path":"Docker/chapter.3/repositories.md","ref":"Docker/chapter.3/repositories.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker/chapter.4/best-dockerfile.md","mtime":"2020-11-22T13:07:14.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-22T13:08:10.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

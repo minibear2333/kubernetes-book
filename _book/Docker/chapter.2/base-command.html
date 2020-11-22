@@ -1,0 +1,1006 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础命令 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="image-command.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Docker.md">
+            
+                <span>
+            
+                    
+                    容器&Docker入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../me.html">
+            
+                <a href="../../me.html">
+            
+                    
+                    个人简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter.1/docker-story.html">
+            
+                <a href="../chapter.1/docker-story.html">
+            
+                    
+                    容器故事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter.1/deal-what.html">
+            
+                <a href="../chapter.1/deal-what.html">
+            
+                    
+                    能解决什么问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter.1/docker-superiority.html">
+            
+                <a href="../chapter.1/docker-superiority.html">
+            
+                    
+                    优势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter.1/what-is-image.html">
+            
+                <a href="../chapter.1/what-is-image.html">
+            
+                    
+                    镜像概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter.1/what-is-docker.html">
+            
+                <a href="../chapter.1/what-is-docker.html">
+            
+                    
+                    容器概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter.1/what-is-repository.html">
+            
+                <a href="../chapter.1/what-is-repository.html">
+            
+                    
+                    仓库概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Docker.md">
+            
+                <span>
+            
+                    
+                    Docker 安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter.1/安装Docker.html">
+            
+                <a href="../chapter.1/安装Docker.html">
+            
+                    
+                    安装说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter.1/Centos安装.html">
+            
+                <a href="../chapter.1/Centos安装.html">
+            
+                    
+                    CentOS安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter.1/Windows安装.html">
+            
+                <a href="../chapter.1/Windows安装.html">
+            
+                    
+                    Windows安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter.1/Macbook安装.html">
+            
+                <a href="../chapter.1/Macbook安装.html">
+            
+                    
+                    Macbook安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter.1/">
+            
+                <a href="../chapter.1/">
+            
+                    
+                    容器&docker入门实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="base-command.html">
+            
+                <a href="base-command.html">
+            
+                    
+                    基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="image-command.html">
+            
+                <a href="image-command.html">
+            
+                    
+                    镜像命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="container-command.html">
+            
+                <a href="container-command.html">
+            
+                    
+                    容器操作命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="container-command2.html">
+            
+                <a href="container-command2.html">
+            
+                    
+                    容器管理命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="resources-command.html">
+            
+                <a href="resources-command.html">
+            
+                    
+                    资源命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="lab-wordpress.html">
+            
+                <a href="lab-wordpress.html">
+            
+                    
+                    wordpress博客系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="lab-python.html">
+            
+                <a href="lab-python.html">
+            
+                    
+                    python文件下载系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Docker-images.md">
+            
+                <span>
+            
+                    
+                    Docker 镜像
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter.3/c-dockerfile.html">
+            
+                <a href="../chapter.3/c-dockerfile.html">
+            
+                    
+                    Dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter.3/repositories.html">
+            
+                <a href="../chapter.3/repositories.html">
+            
+                    
+                    个人仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter.4/best-dockerfile.html">
+            
+                <a href="../chapter.4/best-dockerfile.html">
+            
+                    
+                    Dockerfile最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter.4/best-dockerfile-other.html">
+            
+                <a href="../chapter.4/best-dockerfile-other.html">
+            
+                    
+                    Dockerfile其他建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker 存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    挂载卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Docker Swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../wait.html">
+            
+                <a href="../../wait.html">
+            
+                    
+                    Kubernetes入门.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../Kubernetes/chapter.1/install-k8s.html">
+            
+                <a href="../../Kubernetes/chapter.1/install-k8s.html">
+            
+                    
+                    Kubernetes安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >基础命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x7840;&#x547D;&#x4EE4;">&#x57FA;&#x7840;&#x547D;&#x4EE4;</h1>
+<p>&#x9488;&#x5BF9; <code>docker</code> &#x672C;&#x8EAB;&#x7684;&#x547D;&#x4EE4;</p>
+<h3 id="&#x547D;&#x4EE4;&#x901F;&#x67E5;">&#x547D;&#x4EE4;&#x901F;&#x67E5;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x547D;&#x4EE4;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">info</td>
+<td style="text-align:left">&#x663E;&#x793A; Docker &#x8BE6;&#x7EC6;&#x7684;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">version</td>
+<td style="text-align:left">&#x663E;&#x793A;docker&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x7248;&#x672C;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">inspect</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x6216;&#x955C;&#x50CF;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;, &#x9ED8;&#x8BA4;&#x4E3A;json&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">events</td>
+<td style="text-align:left">&#x5B9E;&#x65F6;&#x6253;&#x5370;&#x670D;&#x52A1;&#x7AEF;&#x6267;&#x884C;&#x7684;&#x4E8B;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x67E5;&#x770B;docker&#x4FE1;&#x606F;-info&#x547D;&#x4EE4;">&#x67E5;&#x770B;docker&#x4FE1;&#x606F; info&#x547D;&#x4EE4;</h3>
+<p><a href="https://docs.docker.com/engine/reference/commandline/info/" target="_blank">https://docs.docker.com/engine/reference/commandline/info/</a></p>
+<p>&#x6B64;&#x547D;&#x4EE4;&#x663E;&#x793A;&#x6709;&#x5173;Docker&#x5B89;&#x88C5;&#x7684;&#x7CFB;&#x7EDF;&#x8303;&#x56F4;&#x4FE1;&#x606F;&#x3002; </p>
+<pre><code class="lang-BASH">docker info
+</code></pre>
+<ul>
+<li>&#x663E;&#x793A;&#x7684;&#x4FE1;&#x606F;<strong>docker&#x672C;&#x8EAB;&#x7684;&#x4FE1;&#x606F;</strong>&#x5305;&#x62EC;&#x5185;&#x6838;&#x7248;&#x672C;&#xFF0C;&#x5BB9;&#x5668;&#x548C;&#x955C;&#x50CF;&#x7684;&#x6570;&#x91CF;&#x3002; (&#x663E;&#x793A;&#x7684;&#x955C;&#x50CF;&#x6570;&#x91CF;&#x662F;&#x552F;&#x4E00;&#x955C;&#x50CF;&#x7684;&#x6570;&#x91CF;&#x3002;&#x4EE5;&#x4E0D;&#x540C;&#x540D;&#x79F0;&#x6807;&#x8BB0;&#x7684;&#x76F8;&#x540C;&#x955C;&#x50CF;&#x4EC5;&#x8BA1;&#x7B97;&#x4E00;&#x6B21;&#x3002;)</li>
+<li>&#x6839;&#x636E;&#x6240;&#x4F7F;&#x7528;&#x7684;<strong>&#x5B58;&#x50A8;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x6C60;&#x540D;&#x79F0;&#xFF0C;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x5143;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#xFF0C;&#x603B;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x5143;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x4EE5;&#x53CA;&#x603B;&#x5143;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x3002;</li>
+</ul>
+<p>&#x5F53;&#x5BB9;&#x5668;&#x7B2C;&#x4E00;&#x6B21;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;Docker&#x4F1A;&#x4ECE;&#x6302;&#x8F7D;&#x4E86; /var/lib/docker &#x7684;&#x5377;&#x4E0A;&#x7684;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x5206;&#x914D;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x548C;&#x5143;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x3002;</p>
+<pre><code class="lang-BASH">$ docker info
+Containers: 4 <span class="hljs-comment"># &#x5BB9;&#x5668;&#x6570;&#x91CF;</span>
+ Running: 0
+ Paused: 0
+ Stopped: 4
+Images: 39   <span class="hljs-comment"># &#x955C;&#x50CF;&#x6570;&#x91CF;</span>
+Server Version: 18.09.1  <span class="hljs-comment"># &#x670D;&#x52A1;&#x5668;&#x7248;&#x672C;</span>
+Storage Driver: overlay2 <span class="hljs-comment"># &#x5B58;&#x50A8;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</span>
+ Backing Filesystem: extfs
+ Supports d_<span class="hljs-built_in">type</span>: <span class="hljs-literal">true</span>
+ Native Overlay Diff: <span class="hljs-literal">true</span>
+Logging Driver: json-file <span class="hljs-comment"># &#x65E5;&#x5FD7;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</span>
+Cgroup Driver: cgroupfs <span class="hljs-comment"># cgroup&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</span>
+Plugins: <span class="hljs-comment"># &#x63D2;&#x4EF6;</span>
+ Volume: <span class="hljs-built_in">local</span>
+ Network: bridge host macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file <span class="hljs-built_in">local</span> logentries splunk syslog
+Swarm: inactive <span class="hljs-comment"># swarm&#x4FE1;&#x606F;</span>
+Runtimes: runc <span class="hljs-comment"># runtimes&#x4FE1;&#x606F;</span>
+Default Runtime: runc <span class="hljs-comment"># &#x9ED8;&#x8BA4;runtime</span>
+Init Binary: docker-init
+containerd version: 9754871865f7fe2f4e74d43e2<span class="hljs-built_in">fc</span>7ccd237edcbce
+runc version: 96ec2177ae841256168fcf76954f7177af9446eb
+init version: fec3683
+Security Options: <span class="hljs-comment"># &#x5B89;&#x5168;&#x9009;&#x9879;</span>
+ apparmor
+ seccomp
+  Profile: default
+Kernel Version: 4.15.0-38-generic <span class="hljs-comment"># linux&#x5185;&#x6838;&#x7248;&#x672C;</span>
+Operating System: Linux Mint 18.3 <span class="hljs-comment"># &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</span>
+OSType: linux
+Architecture: x86_64
+CPUs: 12 <span class="hljs-comment"># &#x786C;&#x4EF6;&#x4FE1;&#x606F;</span>
+Total Memory: 15.12GiB
+Name: skywork
+ID: CICY:F7VQ:DKBG:IEG4:SY75:A6IK:DV52:GIXI:F3P5:VPIM:QMU3:ZXK2
+Docker Root Dir: /var/lib/docker <span class="hljs-comment"># docker&#x6839;&#x76EE;&#x5F55;</span>
+Debug Mode (client): <span class="hljs-literal">false</span>
+Debug Mode (server): <span class="hljs-literal">false</span>
+Registry: https://index.docker.io/v1/ <span class="hljs-comment"># &#x955C;&#x50CF;&#x4ED3;&#x5E93;</span>
+Labels:
+Experimental: <span class="hljs-literal">false</span>
+Insecure Registries: <span class="hljs-comment"># &#x975E;&#x5B89;&#x5168;&#x955C;&#x50CF;&#x4ED3;&#x5E93;</span>
+ 127.0.0.0/8
+Registry Mirrors: <span class="hljs-comment"># &#x955C;&#x50CF;&#x4ED3;&#x5E93;</span>
+ https://&#xD7;&#xD7;&#xD7;&#xD7;.mirror.aliyuncs.com/
+Live Restore Enabled: <span class="hljs-literal">false</span>
+Product License: Community Engine <span class="hljs-comment"># docker&#x7684;&#x4EA7;&#x54C1;license</span>
+
+WARNING: No swap <span class="hljs-built_in">limit</span> support
+</code></pre>
+<h3 id="docker-info-&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;">docker info &#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>-f</code> &#x9009;&#x9879;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x53D6;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x505A;&#x4E3A;&#x76D1;&#x63A7;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-BASH">$ docker info --format <span class="hljs-string">&apos;{{json .}}&apos;</span>
+
+{
+    <span class="hljs-string">&quot;ID&quot;</span>:<span class="hljs-string">&quot;CICY:F7VQ:DKBG:IEG4:SY75:A6IK:DV52:GIXI:F3P5:VPIM:QMU3:ZXK2&quot;</span>,
+    <span class="hljs-string">&quot;Containers&quot;</span>:4,
+    <span class="hljs-string">&quot;ContainersRunning&quot;</span>:0,
+    <span class="hljs-string">&quot;ContainersPaused&quot;</span>:0,
+    <span class="hljs-string">&quot;ContainersStopped&quot;</span>:4,
+    <span class="hljs-string">&quot;Images&quot;</span>:39,
+    <span class="hljs-string">&quot;Driver&quot;</span>:<span class="hljs-string">&quot;overlay2&quot;</span>,
+    <span class="hljs-string">&quot;DriverStatus&quot;</span>:[
+        [
+            <span class="hljs-string">&quot;Backing Filesystem&quot;</span>,
+            <span class="hljs-string">&quot;extfs&quot;</span>
+        ],
+        [
+            <span class="hljs-string">&quot;Supports d_type&quot;</span>,
+            <span class="hljs-string">&quot;true&quot;</span>
+        ],
+        [
+            <span class="hljs-string">&quot;Native Overlay Diff&quot;</span>,
+            <span class="hljs-string">&quot;true&quot;</span>
+        ]
+    ],
+    <span class="hljs-string">&quot;SystemStatus&quot;</span>:null,
+    <span class="hljs-string">&quot;Plugins&quot;</span>:{
+        <span class="hljs-string">&quot;Volume&quot;</span>:[
+            <span class="hljs-string">&quot;local&quot;</span>
+        ],
+        <span class="hljs-string">&quot;Network&quot;</span>:[
+            <span class="hljs-string">&quot;bridge&quot;</span>,
+            <span class="hljs-string">&quot;host&quot;</span>,
+            <span class="hljs-string">&quot;macvlan&quot;</span>,
+            <span class="hljs-string">&quot;null&quot;</span>,
+            <span class="hljs-string">&quot;overlay&quot;</span>
+        ],
+        <span class="hljs-string">&quot;Authorization&quot;</span>:null,
+        <span class="hljs-string">&quot;Log&quot;</span>:[
+            <span class="hljs-string">&quot;awslogs&quot;</span>,
+            <span class="hljs-string">&quot;fluentd&quot;</span>,
+            <span class="hljs-string">&quot;gcplogs&quot;</span>,
+            <span class="hljs-string">&quot;gelf&quot;</span>,
+            <span class="hljs-string">&quot;journald&quot;</span>,
+            <span class="hljs-string">&quot;json-file&quot;</span>,
+            <span class="hljs-string">&quot;local&quot;</span>,
+            <span class="hljs-string">&quot;logentries&quot;</span>,
+            <span class="hljs-string">&quot;splunk&quot;</span>,
+            <span class="hljs-string">&quot;syslog&quot;</span>
+        ]
+    },
+    <span class="hljs-string">&quot;MemoryLimit&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;SwapLimit&quot;</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;KernelMemory&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;CpuCfsPeriod&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;CpuCfsQuota&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;CPUShares&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;CPUSet&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;IPv4Forwarding&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;BridgeNfIptables&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;BridgeNfIp6tables&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;Debug&quot;</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;NFd&quot;</span>:21,
+    <span class="hljs-string">&quot;OomKillDisable&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;NGoroutines&quot;</span>:36,
+    <span class="hljs-string">&quot;SystemTime&quot;</span>:<span class="hljs-string">&quot;2019-01-26T21:02:24.681737152+08:00&quot;</span>,
+    <span class="hljs-string">&quot;LoggingDriver&quot;</span>:<span class="hljs-string">&quot;json-file&quot;</span>,
+    <span class="hljs-string">&quot;CgroupDriver&quot;</span>:<span class="hljs-string">&quot;cgroupfs&quot;</span>,
+    <span class="hljs-string">&quot;NEventsListener&quot;</span>:0,
+    <span class="hljs-string">&quot;KernelVersion&quot;</span>:<span class="hljs-string">&quot;4.15.0-38-generic&quot;</span>,
+    <span class="hljs-string">&quot;OperatingSystem&quot;</span>:<span class="hljs-string">&quot;Linux Mint 18.3&quot;</span>,
+    <span class="hljs-string">&quot;OSType&quot;</span>:<span class="hljs-string">&quot;linux&quot;</span>,
+    <span class="hljs-string">&quot;Architecture&quot;</span>:<span class="hljs-string">&quot;x86_64&quot;</span>,
+    <span class="hljs-string">&quot;IndexServerAddress&quot;</span>:<span class="hljs-string">&quot;https://index.docker.io/v1/&quot;</span>,
+    <span class="hljs-string">&quot;RegistryConfig&quot;</span>:{
+        <span class="hljs-string">&quot;AllowNondistributableArtifactsCIDRs&quot;</span>:[
+
+        ],
+        <span class="hljs-string">&quot;AllowNondistributableArtifactsHostnames&quot;</span>:[
+
+        ],
+        <span class="hljs-string">&quot;InsecureRegistryCIDRs&quot;</span>:[
+            <span class="hljs-string">&quot;127.0.0.0/8&quot;</span>
+        ],
+        <span class="hljs-string">&quot;IndexConfigs&quot;</span>:{
+            <span class="hljs-string">&quot;docker.io&quot;</span>:{
+                <span class="hljs-string">&quot;Name&quot;</span>:<span class="hljs-string">&quot;docker.io&quot;</span>,
+                <span class="hljs-string">&quot;Mirrors&quot;</span>:[
+                    <span class="hljs-string">&quot;https://****.mirror.aliyuncs.com/&quot;</span>
+                ],
+                <span class="hljs-string">&quot;Secure&quot;</span>:<span class="hljs-literal">true</span>,
+                <span class="hljs-string">&quot;Official&quot;</span>:<span class="hljs-literal">true</span>
+            }
+        },
+        <span class="hljs-string">&quot;Mirrors&quot;</span>:[
+            <span class="hljs-string">&quot;https://****.mirror.aliyuncs.com/&quot;</span>
+        ]
+    },
+    <span class="hljs-string">&quot;NCPU&quot;</span>:12,
+    <span class="hljs-string">&quot;MemTotal&quot;</span>:16233955328,
+    <span class="hljs-string">&quot;GenericResources&quot;</span>:null,
+    <span class="hljs-string">&quot;DockerRootDir&quot;</span>:<span class="hljs-string">&quot;/var/lib/docker&quot;</span>,
+    <span class="hljs-string">&quot;HttpProxy&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;HttpsProxy&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;NoProxy&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;Name&quot;</span>:<span class="hljs-string">&quot;skywork&quot;</span>,
+    <span class="hljs-string">&quot;Labels&quot;</span>:[
+
+    ],
+    <span class="hljs-string">&quot;ExperimentalBuild&quot;</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;ServerVersion&quot;</span>:<span class="hljs-string">&quot;18.09.1&quot;</span>,
+    <span class="hljs-string">&quot;ClusterStore&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;ClusterAdvertise&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;Runtimes&quot;</span>:{
+        <span class="hljs-string">&quot;runc&quot;</span>:{
+            <span class="hljs-string">&quot;path&quot;</span>:<span class="hljs-string">&quot;runc&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;DefaultRuntime&quot;</span>:<span class="hljs-string">&quot;runc&quot;</span>,
+    <span class="hljs-string">&quot;Swarm&quot;</span>:{
+        <span class="hljs-string">&quot;NodeID&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;NodeAddr&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;LocalNodeState&quot;</span>:<span class="hljs-string">&quot;inactive&quot;</span>,
+        <span class="hljs-string">&quot;ControlAvailable&quot;</span>:<span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;Error&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;RemoteManagers&quot;</span>:null
+    },
+    <span class="hljs-string">&quot;LiveRestoreEnabled&quot;</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;Isolation&quot;</span>:<span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;InitBinary&quot;</span>:<span class="hljs-string">&quot;docker-init&quot;</span>,
+    <span class="hljs-string">&quot;ContainerdCommit&quot;</span>:{
+        <span class="hljs-string">&quot;ID&quot;</span>:<span class="hljs-string">&quot;9754871865f7fe2f4e74d43e2fc7ccd237edcbce&quot;</span>,
+        <span class="hljs-string">&quot;Expected&quot;</span>:<span class="hljs-string">&quot;9754871865f7fe2f4e74d43e2fc7ccd237edcbce&quot;</span>
+    },
+    <span class="hljs-string">&quot;RuncCommit&quot;</span>:{
+        <span class="hljs-string">&quot;ID&quot;</span>:<span class="hljs-string">&quot;96ec2177ae841256168fcf76954f7177af9446eb&quot;</span>,
+        <span class="hljs-string">&quot;Expected&quot;</span>:<span class="hljs-string">&quot;96ec2177ae841256168fcf76954f7177af9446eb&quot;</span>
+    },
+    <span class="hljs-string">&quot;InitCommit&quot;</span>:{
+        <span class="hljs-string">&quot;ID&quot;</span>:<span class="hljs-string">&quot;fec3683&quot;</span>,
+        <span class="hljs-string">&quot;Expected&quot;</span>:<span class="hljs-string">&quot;fec3683&quot;</span>
+    },
+    <span class="hljs-string">&quot;SecurityOptions&quot;</span>:[
+        <span class="hljs-string">&quot;name=apparmor&quot;</span>,
+        <span class="hljs-string">&quot;name=seccomp,profile=default&quot;</span>
+    ],
+    <span class="hljs-string">&quot;ProductLicense&quot;</span>:<span class="hljs-string">&quot;Community Engine&quot;</span>,
+    <span class="hljs-string">&quot;Warnings&quot;</span>:[
+        <span class="hljs-string">&quot;WARNING: No swap limit support&quot;</span>
+    ]
+}
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x7248;&#x672C;-version&#x547D;&#x4EE4;">&#x67E5;&#x770B;&#x7248;&#x672C; version&#x547D;&#x4EE4;</h3>
+<p><a href="https://docs.docker.com/engine/reference/commandline/version/" target="_blank">https://docs.docker.com/engine/reference/commandline/version/</a></p>
+<p>&#x67E5;&#x770B; docker &#x7248;&#x672C;</p>
+<pre><code class="lang-BASH">$ docker version
+</code></pre>
+<p>&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-BASH">$ docker version --format <span class="hljs-string">&apos;{{json .}}&apos;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x83B7;&#x53D6;&#x5176;&#x4E2D;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x5982;:</p>
+<pre><code class="lang-BASH">$ docker version --format <span class="hljs-string">&apos;{{.Server.Version}}&apos;</span>
+
+18.09.1
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x5404;&#x8D44;&#x6E90;&#x4FE1;&#x606F;-inspect&#x547D;&#x4EE4;">&#x67E5;&#x770B;&#x5404;&#x8D44;&#x6E90;&#x4FE1;&#x606F; inspect&#x547D;&#x4EE4;</h3>
+<p>&#x6B64;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x955C;&#x50CF;&#x3001;&#x5BB9;&#x5668;&#x3001;&#x7F51;&#x7EDC;&#x3001;&#x5B58;&#x50A8;
+<a href="https://docs.docker.com/engine/reference/commandline/inspect/" target="_blank">https://docs.docker.com/engine/reference/commandline/inspect/</a></p>
+<pre><code class="lang-BASH">docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+</code></pre>
+<p>&#x6BD4;&#x5982;&#x67E5;&#x770B;&#x955C;&#x50CF;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-BASH">$ docker images
+REPOSITORY                                 TAG                                        IMAGE ID            CREATED             SIZE
+k8s.gcr.io/kube-proxy                      v1.12.2                                    15e9da1ca195        3 months ago        96.5MB
+
+$ docker inspect 15e9da1ca195
+</code></pre>
+<p>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-BASH">$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+81d27abaf849        0d493297b409        <span class="hljs-string">&quot;nginx -g &apos;daemon of&#x2026;&quot;</span>   2 hours ago         Up 2 hours                              xxx
+
+$ docker inspect 81d27abaf849
+</code></pre>
+<p>&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-BASH">$ docker inspect --format=<span class="hljs-string">&apos;{{.Id}}&apos;</span>  15e9da1ca195
+sha256:15e9da1ca195086627363bb2e8f5bfca7048345325287d307afd317bab2045b0
+$ docker inspect --format=<span class="hljs-string">&apos;{{.RootFS.Type}}&apos;</span>  15e9da1ca195
+layers
+</code></pre>
+<h3 id="&#x67E5;&#x770B;docker&#x4E8B;&#x4EF6;-events&#x547D;&#x4EE4;">&#x67E5;&#x770B;docker&#x4E8B;&#x4EF6; events&#x547D;&#x4EE4;</h3>
+<p><a href="https://docs.docker.com/engine/reference/commandline/events/" target="_blank">https://docs.docker.com/engine/reference/commandline/events/</a></p>
+<p>&#x8FD9;&#x91CC;&#x8981;&#x5F00;&#x4E24;&#x4E2A;&#x7EC8;&#x7AEF;</p>
+<pre><code class="lang-BASH">$ docker events
+</code></pre>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x4EFB;&#x4F55;docker&#x547D;&#x4EE4;&#xFF0C;&#x7136;&#x540E; <code>events</code> &#x4F1A;&#x6253;&#x5370;&#x51FA;&#x6765;&#x6267;&#x884C;&#x65E5;&#x5FD7;</p>
+<h3 id="&#x5F15;&#x7528;">&#x5F15;&#x7528;</h3>
+<p><a href="https://skyao.io/learning-docker/command/basic/" target="_blank">https://skyao.io/learning-docker/command/basic/</a></p>
+<h3 id="&#x516C;&#x4F17;&#x53F7;">&#x516C;&#x4F17;&#x53F7;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8BA2;&#x9605;&#x6211;&#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x53EF;&#x4EE5;&#x5FAE;&#x4FE1;&#x626B;&#x7801;&#x5173;&#x6CE8;&#x6211;&#x7684;&#x516C;&#x4F17;&#x53F7;&#x3010;&#x673A;&#x667A;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x5C0F;&#x718A;&#x3011;&#xFF0C;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x7231;&#x601D;&#x8003;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x4E13;&#x6CE8;&#x4E8E;&#x5F00;&#x53D1;&#x3001;&#x8FD0;&#x7EF4;&#x3001;&#x4E91;&#x6280;&#x672F;&#x3001;&#x8BA1;&#x7B97;&#x3001;&#x7F51;&#x7EDC;&#x3001;&#x4E91;&#x5B58;&#x50A8;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;linux&#x7B49;&#x7F16;&#x7A0B;&#x77E5;&#x8BC6;</p>
+<p><img src="images/gzh.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Docker命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="image-command.html" class="navigation navigation-next " aria-label="Next page: 镜像命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础命令","level":"1.4.1","depth":2,"next":{"title":"镜像命令","level":"1.4.2","depth":2,"path":"Docker/chapter.2/image-command.md","ref":"Docker/chapter.2/image-command.md","articles":[]},"previous":{"title":"Docker命令","level":"1.4","depth":1,"path":"Docker/chapter.2/README.md","ref":"Docker/chapter.2/README.md","articles":[{"title":"基础命令","level":"1.4.1","depth":2,"path":"Docker/chapter.2/base-command.md","ref":"Docker/chapter.2/base-command.md","articles":[]},{"title":"镜像命令","level":"1.4.2","depth":2,"path":"Docker/chapter.2/image-command.md","ref":"Docker/chapter.2/image-command.md","articles":[]},{"title":"容器操作命令","level":"1.4.3","depth":2,"path":"Docker/chapter.2/container-command.md","ref":"Docker/chapter.2/container-command.md","articles":[]},{"title":"容器管理命令","level":"1.4.4","depth":2,"path":"Docker/chapter.2/container-command2.md","ref":"Docker/chapter.2/container-command2.md","articles":[]},{"title":"资源命令","level":"1.4.5","depth":2,"path":"Docker/chapter.2/resources-command.md","ref":"Docker/chapter.2/resources-command.md","articles":[]},{"title":"wordpress博客系统","level":"1.4.6","depth":2,"path":"Docker/chapter.2/lab-wordpress.md","ref":"Docker/chapter.2/lab-wordpress.md","articles":[]},{"title":"python文件下载系统","level":"1.4.7","depth":2,"path":"Docker/chapter.2/lab-python.md","ref":"Docker/chapter.2/lab-python.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker/chapter.2/base-command.md","mtime":"2020-11-22T13:07:14.694Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-22T13:08:10.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
