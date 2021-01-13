@@ -36,5 +36,6 @@
 * [Docker Swarm[更新中]](wait.md)
 * [Kubernetes入门[更新中]](wait.md)
 * [Kubernetes安装[更新中]](Kubernetes/chapter.1/install-k8s.md)
+* [k8s技巧大全](Kubernetes/skill/k8s技巧完全版.md)
 * [CKA刷题之路](Kubernetes/CKA-1/Intorduction.md)
     - [2019年考试题目](Kubernetes/CKA-1/cka-list.md)
